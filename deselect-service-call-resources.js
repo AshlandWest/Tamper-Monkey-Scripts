@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Deselect Service Call Resources
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Deselect all the resource checkboxes from a new service call.
 // @author       Ash
 // @match        https://ww5.autotask.net/*/service_ticket_panel_edit.*
