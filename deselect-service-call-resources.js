@@ -4,7 +4,7 @@
 // @version      1.0
 // @description  Deselect all the resource checkboxes from a new service call.
 // @author       Ash
-// @match        https://ww5.autotask.net/autotask/views/ServiceDesk/ServiceDeskTicket/service_ticket_panel_edit.aspx?ticketRenderType=ServiceCall&*
+// @match        https://ww5.autotask.net/*/service_ticket_panel_edit.*
 // @grant        none
 // ==/UserScript==
 
