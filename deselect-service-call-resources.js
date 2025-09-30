@@ -14,9 +14,21 @@
   const resourceTable = document.getElementsByClassName(
     "service_call_render_resource_table"
   )[0];
+  const previouslySelectedOptions = [];
   const resourceCheckboxes = resourceTable.getElementsByTagName("input");
-  Array.prototype.forEach.call(
-    resourceCheckboxes,
-    (inputElement) => (inputElement.checked = false)
-  );
+  Array.prototype.forEach.call(resourceCheckboxes, (inputElement) => {
+    if (inputElement.checked) {
+      previouslySelectedOptions.push(inputElement);
+    }
+    inputElement.checked = false;
+  });
+  const restoreButton = document.createElement("button");
+  restoreButton.innerText = "Restore Selected";
+  restoreButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    previouslySelectedOptions.forEach((checkbox) => {
+      checkbox.checked = "checked";
+    });
+  });
+  resourceTable.appendChild(restoreButton);
 })();
