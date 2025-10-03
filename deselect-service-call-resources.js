@@ -17,6 +17,9 @@
   const previouslySelectedOptions = [];
   const resourceCheckboxes = resourceTable.getElementsByTagName("input");
   Array.prototype.forEach.call(resourceCheckboxes, (inputElement) => {
+    if(inputElement) {
+      inputElement.style.margin = "3px"
+    }
     if (inputElement.checked) {
       previouslySelectedOptions.push(inputElement);
     }
